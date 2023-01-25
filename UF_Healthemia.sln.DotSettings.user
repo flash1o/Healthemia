@@ -1,0 +1,24 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005CVladyslav_005CDesktop_005CUntarkovJob_005CLibraries_005CAssembly_002DCSharp_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005CVladyslav_005CDesktop_005CUntarkovJob_005CLibraries_005CAstarPathfindingProject_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005CVladyslav_005CDesktop_005CUntarkovJob_005CLibraries_005CBattlEye_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005CVladyslav_005CDesktop_005CUntarkovJob_005CLibraries_005Ccom_002Erlabrecque_002Esteamworks_002Enet_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005CVladyslav_005CDesktop_005CUntarkovJob_005CLibraries_005CNewtonsoft_002EJson_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005CVladyslav_005CDesktop_005CUntarkovJob_005CLibraries_005CRazerChroma_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005CVladyslav_005CDesktop_005CUntarkovJob_005CLibraries_005CRocket_002EAPI_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005CVladyslav_005CDesktop_005CUntarkovJob_005CLibraries_005CRocket_002ECore_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005CVladyslav_005CDesktop_005CUntarkovJob_005CLibraries_005CRocket_002EUnturned_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005CVladyslav_005CDesktop_005CUntarkovJob_005CLibraries_005CSDG_002EGlazier_002ERuntime_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005CVladyslav_005CDesktop_005CUntarkovJob_005CLibraries_005CSDG_002EHostBans_002ERuntime_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005CVladyslav_005CDesktop_005CUntarkovJob_005CLibraries_005CSDG_002ENetPak_002ERuntime_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005CVladyslav_005CDesktop_005CUntarkovJob_005CLibraries_005CSDG_002ENetTransport_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005CVladyslav_005CDesktop_005CUntarkovJob_005CLibraries_005CStandardAssets_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005CVladyslav_005CDesktop_005CUntarkovJob_005CLibraries_005CSteelSeriesGameSense_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005CVladyslav_005CDesktop_005CUntarkovJob_005CLibraries_005CUnityEngine_002ECoreModule_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005CVladyslav_005CDesktop_005CUntarkovJob_005CLibraries_005CUnityEngine_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005CVladyslav_005CDesktop_005CUntarkovJob_005CLibraries_005CUnityEngine_002EPhysics2DModule_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005CVladyslav_005CDesktop_005CUntarkovJob_005CLibraries_005CUnityEngine_002EPhysicsModule_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005CVladyslav_005CDesktop_005CUntarkovJob_005CLibraries_005CUnityEngine_002EProfilerModule_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005CVladyslav_005CDesktop_005CUntarkovJob_005CLibraries_005CUnityEngine_002EUI_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005CVladyslav_005CDesktop_005CUntarkovJob_005CLibraries_005CUnityEx_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Healthemia/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>
