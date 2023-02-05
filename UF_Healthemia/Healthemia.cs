@@ -7,7 +7,7 @@ namespace UF_Healthemia
 {
     public class Healthemia : RocketPlugin<HealthemiaConfiguration>
     {
-        public Healthemia Instance;
+        public static Healthemia Instance;
         private HealthemiaDraggingService _draggingService;
         
         protected override void Load()

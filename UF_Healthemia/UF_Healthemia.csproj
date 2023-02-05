@@ -108,7 +108,10 @@
     <Compile Include="Healthemia.cs" />
     <Compile Include="HealthemiaConfiguration.cs" />
     <Compile Include="Models\HealthemiaDraggingAction.cs" />
-    <Compile Include="Models\HealthemiaLimbsHealth.cs" />
+    <Compile Include="Models\HealthemiaModels\HealthemiaBreakableLimb.cs" />
+    <Compile Include="Models\HealthemiaModels\HealthemiaLimb.cs" />
+    <Compile Include="Models\HealthemiaPlayerHealth.cs" />
+    <Compile Include="Models\HealthemiaPlayerState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\HealthemiaDraggingService.cs" />
   </ItemGroup>
