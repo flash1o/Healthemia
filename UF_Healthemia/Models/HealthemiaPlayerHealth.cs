@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using SDG.Unturned;
+using UF_Healthemia.Helpers;
 using UF_Healthemia.Models.HealthemiaModels;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ namespace UF_Healthemia.Models
 {
     public class HealthemiaPlayerHealth
     {
+        public bool AbleToMove => _healthemiaPlayerState is HealthemiaPlayerState.Alive;
+        
         private Player _player;
         private float _totalHealth => _head.Health + _thorax.Health + _back.Health + _leftArm.Health + _rightArm.Health + _leftLeg.Health + _rightLeg.Health;
         private HealthemiaLimb _head { get; set; }
@@ -17,8 +20,29 @@ namespace UF_Healthemia.Models
         private HealthemiaBreakableLimb _rightArm { get; set; }
         private HealthemiaBreakableLimb _leftLeg { get; set; }
         private HealthemiaBreakableLimb _rightLeg { get; set; }
+        private HealthemiaPlayerHealthHelper _helper => Healthemia.Instance.PlayerHealthService.HealthHelper;
 
-        private HealthemiaPlayerState _healthemiaPlayerState { get; set; }
+        private HealthemiaPlayerState _healthemiaPlayerState
+        {
+            get => _healthemiaPlayerState;
+            set
+            {
+                switch (value)
+                {
+                   case HealthemiaPlayerState.Dying:
+                       SetDying();
+                       break;
+                   case HealthemiaPlayerState.Unconscious:
+                       SetUnconsnious();
+                       break;
+                   case HealthemiaPlayerState.Alive:
+                       break;
+                   default:
+                       break;
+                }
+               
+            }
+        }
 
         private HealthemiaConfiguration _configuration => Healthemia.Instance.Configuration.Instance;
 
@@ -29,16 +53,32 @@ namespace UF_Healthemia.Models
             InitializeLimbs();
         }
 
-        public void TakeDamage(int damage, HealthemiaLimb limb, bool causesBleeding, bool causesBreakingBones)
+        public void SendDamage(ELimb limb, EDeathCause cause, int damage)
+        {
+            var healthemiaLimb = ConvertUnturnedLimbToHealthemiaLimb(limb);
+            bool causeBleeding = _helper.ShouldCauseBleeding(cause);
+            bool causeBreakingBones = _helper.ShouldBreakBones(cause);
+            TakeDamage(damage, healthemiaLimb, causeBleeding, causeBreakingBones);
+        }
+
+        private void TakeDamage(int damage, HealthemiaLimb limb, bool causesBleeding, bool causesBreakingBones)
         {
             limb.Health -= damage;
             limb.IsBleeding = limb.IsBleeding || causesBleeding;
 
             if (limb is HealthemiaBreakableLimb breakableLimb)
                 breakableLimb.IsBroken = breakableLimb.IsBroken || causesBreakingBones;
+
+            if (limb.Health < 0)
+            {
+                if (limb.IsVital)
+                    _healthemiaPlayerState = HealthemiaPlayerState.Dying;
+                else
+                    limb.IsBlackOuted = true;
+            }
         }
 
-        public void InitializeLimbs()
+        private void InitializeLimbs()
         {
             _head = new HealthemiaLimb(_configuration.HeadHealth, true);
             _thorax = new HealthemiaLimb(_configuration.TorsoHealth, true);
@@ -66,6 +106,7 @@ namespace UF_Healthemia.Models
             _player.movement.sendPluginJumpMultiplier(0);
             _player.movement.sendPluginSpeedMultiplier(0);
             _player.stance.checkStance(EPlayerStance.PRONE, true);
+            _player.enablePluginWidgetFlag(EPluginWidgetFlags.Modal);
         }
 
         private void SetUnconsnious()
@@ -76,6 +117,43 @@ namespace UF_Healthemia.Models
         private void SetDying()
         {
             SetFeeblesness();
+        }
+        
+        private HealthemiaLimb ConvertUnturnedLimbToHealthemiaLimb(ELimb limb)
+        {
+            switch (limb)
+            {
+                case ELimb.SKULL:
+                    return _head;
+                case ELimb.LEFT_FRONT:
+                    return _thorax;
+                case ELimb.RIGHT_FRONT:
+                    return _thorax;
+                case ELimb.SPINE:
+                    return _back;
+                case ELimb.LEFT_ARM:
+                    return _leftArm;
+                case ELimb.RIGHT_ARM:
+                    return _rightArm;
+                case ELimb.LEFT_HAND:
+                    return _leftArm;
+                case ELimb.RIGHT_HAND:
+                    return _rightArm;
+                case ELimb.LEFT_LEG:
+                    return _leftLeg;
+                case ELimb.RIGHT_LEG:
+                    return _rightLeg;
+                case ELimb.LEFT_FOOT:
+                    return _leftLeg;
+                case ELimb.RIGHT_FOOT:
+                    return _rightLeg;
+                case ELimb.LEFT_BACK:
+                    return _back;
+                case ELimb.RIGHT_BACK:
+                    return _back;
+                default:
+                    return _thorax;
+            }
         }
     }
 

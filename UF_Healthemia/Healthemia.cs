@@ -8,7 +8,8 @@ namespace UF_Healthemia
     public class Healthemia : RocketPlugin<HealthemiaConfiguration>
     {
         public static Healthemia Instance;
-        private HealthemiaDraggingService _draggingService;
+        public HealthemiaDraggingService DraggingService { get; private set; }
+        public HealthemiaPlayerHealthService PlayerHealthService { get; private set; }
         
         protected override void Load()
         {
@@ -29,7 +30,8 @@ namespace UF_Healthemia
 
         private void InitializeServices()
         {
-            _draggingService = gameObject.AddComponent<HealthemiaDraggingService>();
+            DraggingService = gameObject.AddComponent<HealthemiaDraggingService>();
+            PlayerHealthService = gameObject.AddComponent<HealthemiaPlayerHealthService>();
         }
     }
 }

@@ -105,8 +105,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Components\HealthemiaPlayerComponent.cs" />
+    <Compile Include="Extensions\HealthemiaPlayerExtensions.cs" />
     <Compile Include="Healthemia.cs" />
     <Compile Include="HealthemiaConfiguration.cs" />
+    <Compile Include="Helpers\HealthemiaPlayerHealthHelper.cs" />
     <Compile Include="Models\HealthemiaDraggingAction.cs" />
     <Compile Include="Models\HealthemiaModels\HealthemiaBreakableLimb.cs" />
     <Compile Include="Models\HealthemiaModels\HealthemiaLimb.cs" />
@@ -114,10 +116,7 @@
     <Compile Include="Models\HealthemiaPlayerState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\HealthemiaDraggingService.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Extensions" />
-    <Folder Include="Helpers" />
+    <Compile Include="Services\HealthemiaPlayerHealthService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
