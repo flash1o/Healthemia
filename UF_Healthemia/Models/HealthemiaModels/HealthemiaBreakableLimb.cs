@@ -4,10 +4,15 @@
     {
         public bool IsBroken { get; set; }
 
-
-        public HealthemiaBreakableLimb(int health, bool isVital) : base(health, isVital)
+        public HealthemiaBreakableLimb(byte health, bool isVital, string representation) : base(health, isVital, representation)
         {
             isVital = false;
         }
+
+        public void PlayBreakEffect()
+        {
+            // send sound
+        }
+        
     }
 }

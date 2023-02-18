@@ -1,39 +1,50 @@
 ﻿using System;
+using Rocket.Unturned.Events;
 using Rocket.Unturned.Player;
 using SDG.Unturned;
 using Steamworks;
+using UF_Healthemia.Helpers.Handlers;
 using UF_Healthemia.Models;
+using UF_Healthemia.Models.HealthemiaModels;
+using UF_Healthemia.Tools;
+using UF_Healthemia.UI.Context;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 
 namespace UF_Healthemia.Components
 {
     public class HealthemiaPlayerComponent : MonoBehaviour
     {
-        public bool IsPlayerAlive => _playerHealth.AbleToMove;
+        public bool IsPlayerAlive => _playerHealth.AbleToMove; 
+        public int BrokenArmsCount => _playerHealth.BrokenArmsCount;
         public bool IsInDraggingAction;
-        
+
         private Player _player;
-      
         private HealthemiaPlayerHealth _playerHealth;
+        private HealthemiaPlayerEventHandler _eventHandler => Healthemia.Instance.PlayerHealthService.EventHandler;
 
         private void Start()
         {
             _player = GetComponentInParent<Player>();
             _playerHealth = new HealthemiaPlayerHealth(_player);
+            _player.stance.onStanceUpdated += () => _eventHandler.HandleUpdatedStance(_player, _playerHealth);
+            _player.equipment.onEquipRequested += (PlayerEquipment equipment, ItemJar jar, ItemAsset asset, ref bool allow) => _eventHandler.HandleEquipRequested(_playerHealth, equipment, jar, asset, ref allow);
+        }
+        
 
-            _player.stance.onStanceUpdated += OnStanceUpdated;
-            _player.life.onHurt += OnHurt;
+        public void CauseDamage(byte damage, EDeathCause cause, ELimb limb)
+        {
+            _playerHealth.SendDamage(limb, cause, damage);
         }
 
-        private void OnStanceUpdated()
+        public void CauseHeal(ItemConsumeableAsset asset, ELimb limb)
         {
-            if (!_playerHealth.AbleToMove)
-                _player.stance.checkStance(EPlayerStance.PRONE, true);
+            _playerHealth.SendHeal(asset, limb);
         }
 
-        private void OnHurt(Player player, byte damage, Vector3 force, EDeathCause cause, ELimb limb, CSteamID killer)
+        internal HealthemiaUIContext GetLimbsUIContext()
         {
-            _playerHealth.SendDamage(limb, cause,  damage);
+            return _playerHealth.GetUIContextRepresentation();
         }
     }
 }

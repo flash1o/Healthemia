@@ -1,4 +1,5 @@
 ﻿using SDG.Unturned;
+using UF_Healthemia.Models.HealthemiaModels;
 using UnityEngine;
 
 namespace UF_Healthemia.Helpers
@@ -70,6 +71,7 @@ namespace UF_Healthemia.Helpers
             var random = Random.Range(0f, 100f);
             return bleedingChance > random;
         }
+        
         
     }
 }
