@@ -15,6 +15,11 @@ namespace UF_Healthemia
         public short SecondaryUIKey;
         public byte MaxHealthbarElementsCount => 15;
 
+        public ushort HealUnconsniousOrDyingItem;
+        public float BleedingDamageRefreshTime;
+        public float PunchKnockoutChance;
+        public float MeleeKnockoutChance;
+
         public void LoadDefaults()
         {
             HeadHealth = 55;
@@ -26,6 +31,10 @@ namespace UF_Healthemia
             RightArmHealth = 40;
             PrimaryUIKey = 2220;
             SecondaryUIKey = 2201;
+            HealUnconsniousOrDyingItem = 0; // Adrenaline Id
+            BleedingDamageRefreshTime = 4f;
+            PunchKnockoutChance = 15f;
+            MeleeKnockoutChance = 40f;
         }
 
         public int GetMaxHealth()

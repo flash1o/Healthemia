@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>UF_Healthemia</RootNamespace>
     <AssemblyName>UF_Healthemia</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,81 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony, Version=2.2.2.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\Desktop\0Harmony.dll</HintPath>
-    </Reference>
-    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\Desktop\UntarkovJob\Libraries\Assembly-CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="AstarPathfindingProject, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\Desktop\UntarkovJob\Libraries\AstarPathfindingProject.dll</HintPath>
-    </Reference>
-    <Reference Include="BattlEye, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\Desktop\UntarkovJob\Libraries\BattlEye.dll</HintPath>
-    </Reference>
-    <Reference Include="com.rlabrecque.steamworks.net, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\Desktop\UntarkovJob\Libraries\com.rlabrecque.steamworks.net.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
-      <HintPath>..\..\..\Desktop\UntarkovJob\Libraries\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="RazerChroma, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\Desktop\UntarkovJob\Libraries\RazerChroma.dll</HintPath>
-    </Reference>
-    <Reference Include="Rocket.API, Version=4.9.3.5, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\Desktop\UntarkovJob\Libraries\Rocket.API.dll</HintPath>
-    </Reference>
-    <Reference Include="Rocket.Core, Version=4.9.3.5, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\Desktop\UntarkovJob\Libraries\Rocket.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Rocket.Unturned, Version=4.9.3.14, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\Desktop\UntarkovJob\Libraries\Rocket.Unturned.dll</HintPath>
-    </Reference>
-    <Reference Include="SDG.Glazier.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\Desktop\UntarkovJob\Libraries\SDG.Glazier.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="SDG.HostBans.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\Desktop\UntarkovJob\Libraries\SDG.HostBans.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="SDG.NetPak.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\Desktop\UntarkovJob\Libraries\SDG.NetPak.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="SDG.NetTransport, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\Desktop\UntarkovJob\Libraries\SDG.NetTransport.dll</HintPath>
-    </Reference>
-    <Reference Include="StandardAssets, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\Desktop\UntarkovJob\Libraries\StandardAssets.dll</HintPath>
-    </Reference>
-    <Reference Include="SteelSeriesGameSense, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\Desktop\UntarkovJob\Libraries\SteelSeriesGameSense.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\Desktop\UntarkovJob\Libraries\UnityEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\Desktop\UntarkovJob\Libraries\UnityEngine.CoreModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Physics2DModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\Desktop\UntarkovJob\Libraries\UnityEngine.Physics2DModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\Desktop\UntarkovJob\Libraries\UnityEngine.PhysicsModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ProfilerModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\Desktop\UntarkovJob\Libraries\UnityEngine.ProfilerModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\Desktop\UntarkovJob\Libraries\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEx, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\..\Desktop\UntarkovJob\Libraries\UnityEx.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Components\HealthemiaPlayerComponent.cs" />
     <Compile Include="Extensions\HealthemiaItemExtensions.cs" />
     <Compile Include="Extensions\HealthemiaPlayerExtensions.cs" />
@@ -114,26 +40,108 @@
     <Compile Include="Healthemia.cs" />
     <Compile Include="HealthemiaConfiguration.cs" />
     <Compile Include="Helpers\Handlers\HealthemiaPlayerEventHandler.cs" />
-    <Compile Include="Helpers\HealthemiaPlayerHealthHelper.cs" />
+    <Compile Include="Helpers\HealthemiaDiseaseInfector.cs" />
+    <Compile Include="Helpers\HealthemiaConsumeEventHandler.cs" />
+    <Compile Include="Helpers\HealthemiaHealer.cs" />
+    <Compile Include="Helpers\HealthemiaDamageCalculator.cs" />
     <Compile Include="Helpers\HealthemiaUIHelper.cs" />
-    <Compile Include="Models\HealthemiaDraggingAction.cs" />
-    <Compile Include="Models\HealthemiaModels\HealthemiaArmLimb.cs" />
-    <Compile Include="Models\HealthemiaModels\HealthemiaBreakableLimb.cs" />
-    <Compile Include="Models\HealthemiaModels\HealthemiaLegLimb.cs" />
-    <Compile Include="Models\HealthemiaModels\HealthemiaLimb.cs" />
-    <Compile Include="Models\HealthemiaModels\HealthemiaWoundInabilities.cs" />
-    <Compile Include="Models\HealthemiaPlayerHealth.cs" />
-    <Compile Include="Models\HealthemiaPlayerState.cs" />
+    <Compile Include="Models\Diseases\HealthemiaActiveDisease.cs" />
+    <Compile Include="Models\Diseases\Poisoning.cs" />
+    <Compile Include="Models\Diseases\Flu.cs" />
+    <Compile Include="Models\Diseases\HealthemiaDisease.cs" />
+    <Compile Include="Models\Actions\HealthemiaDraggingAction.cs" />
+    <Compile Include="Models\HealthemiaHealContext.cs" />
+    <Compile Include="Models\Health\HealthemiaArmLimb.cs" />
+    <Compile Include="Models\Health\Limbs\HealthemiaBreakableLimb.cs" />
+    <Compile Include="Models\Health\HealthemiaLegLimb.cs" />
+    <Compile Include="Models\Health\Limbs\HealthemiaLimb.cs" />
+    <Compile Include="Models\Health\HealthemiaWoundInabilities.cs" />
+    <Compile Include="Models\Health\HealthemiaHealthModel.cs" />
+    <Compile Include="Models\Health\HealthemiaHealthState.cs" />
+    <Compile Include="Models\Medication\DiseaseMedication.cs" />
     <Compile Include="Models\UI\HealthBar.cs" />
     <Compile Include="Patches\HealthemiaHarmony.cs" />
     <Compile Include="Patches\HealthemiaRecoilPatch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\HealthemiaDiseasesProvider.cs" />
+    <Compile Include="Serializable\SerializableLimbsModel.cs" />
+    <Compile Include="Services\HealthemiaDiseasesService.cs" />
     <Compile Include="Services\HealthemiaDraggingService.cs" />
     <Compile Include="Services\HealthemiaPlayerHealthService.cs" />
     <Compile Include="Tools\HealthemiaPlayerModifierTool.cs" />
     <Compile Include="UI\Context\HealthemiaUIContext.cs" />
     <Compile Include="UI\HealthemiaHealthUIRepresenter.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\Downloads\Verweise\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="AstarPathfindingProject">
+      <HintPath>..\..\..\..\..\Downloads\Verweise\AstarPathfindingProject.dll</HintPath>
+    </Reference>
+    <Reference Include="BattlEye">
+      <HintPath>..\..\..\..\..\Downloads\Verweise\BattlEye.dll</HintPath>
+    </Reference>
+    <Reference Include="com.rlabrecque.steamworks.net">
+      <HintPath>..\..\..\..\..\Downloads\Verweise\com.rlabrecque.steamworks.net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\..\Downloads\Verweise\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RazerChroma">
+      <HintPath>..\..\..\..\..\Downloads\Verweise\RazerChroma.dll</HintPath>
+    </Reference>
+    <Reference Include="Rocket.API">
+      <HintPath>..\..\..\..\..\Downloads\Verweise\Rocket.API.dll</HintPath>
+    </Reference>
+    <Reference Include="Rocket.Core">
+      <HintPath>..\..\..\..\..\Downloads\Verweise\Rocket.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Rocket.Unturned">
+      <HintPath>..\..\..\..\..\Downloads\Verweise\Rocket.Unturned.dll</HintPath>
+    </Reference>
+    <Reference Include="SDG.Glazier.Runtime">
+      <HintPath>..\..\..\..\..\Downloads\Verweise\SDG.Glazier.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="SDG.HostBans.Runtime">
+      <HintPath>..\..\..\..\..\Downloads\Verweise\SDG.HostBans.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="SDG.NetPak.Runtime">
+      <HintPath>..\..\..\..\..\Downloads\Verweise\SDG.NetPak.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="SDG.NetTransport">
+      <HintPath>..\..\..\..\..\Downloads\Verweise\SDG.NetTransport.dll</HintPath>
+    </Reference>
+    <Reference Include="StandardAssets">
+      <HintPath>..\..\..\..\..\Downloads\Verweise\StandardAssets.dll</HintPath>
+    </Reference>
+    <Reference Include="SteelSeriesGameSense">
+      <HintPath>..\..\..\..\..\Downloads\Verweise\SteelSeriesGameSense.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\Downloads\Verweise\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\Downloads\Verweise\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>..\..\..\..\..\Downloads\Verweise\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\..\..\..\Downloads\Verweise\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Downloads\Verweise\UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\..\..\Downloads\Verweise\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEx">
+      <HintPath>..\..\..\..\..\Downloads\Verweise\UnityEx.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
          Other similar extension points exist, see Microsoft.Common.targets.

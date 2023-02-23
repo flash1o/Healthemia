@@ -11,6 +11,7 @@ namespace UF_Healthemia.Models.HealthemiaModels
         }
         
         public bool IsBleeding { get; set; }
+      
         public bool IsBlackOuted { get; set; }
 
         public readonly bool IsVital;

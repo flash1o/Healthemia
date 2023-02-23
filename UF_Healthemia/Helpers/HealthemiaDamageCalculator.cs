@@ -4,8 +4,22 @@ using UnityEngine;
 
 namespace UF_Healthemia.Helpers
 {
-    public class HealthemiaPlayerHealthHelper
+    public class HealthemiaDamageCalculator
     {
+        private HealthemiaConfiguration _configuration => Healthemia.Instance.Configuration.Instance;
+        public bool ShouldKnockout(EDeathCause cause)
+        {
+            float knockoutChance;
+            if (cause is EDeathCause.MELEE)
+                knockoutChance = _configuration.MeleeKnockoutChance;
+            else
+                knockoutChance = _configuration.PunchKnockoutChance;
+
+            if (UnityEngine.Random.value > knockoutChance / 100)
+                return true;
+
+            return false;
+        }
         public bool ShouldBreakBones(EDeathCause cause)
         {
             float breakingChance = 0;

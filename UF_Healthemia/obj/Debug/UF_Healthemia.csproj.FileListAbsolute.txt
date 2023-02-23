@@ -27,3 +27,5 @@ C:\Users\Vladyslav\RiderProjects\UF_Healthemia\UF_Healthemia\bin\Debug\UnityEx.d
 C:\Users\Vladyslav\RiderProjects\UF_Healthemia\UF_Healthemia\obj\Debug\UF_Healthemia.csproj.CopyComplete
 C:\Users\Vladyslav\RiderProjects\UF_Healthemia\UF_Healthemia\obj\Debug\UF_Healthemia.dll
 C:\Users\Vladyslav\RiderProjects\UF_Healthemia\UF_Healthemia\obj\Debug\UF_Healthemia.pdb
+C:\Users\VLADYSLA.SHEMET.HR\Source\Repos\flash1o\Healthemia\UF_Healthemia\obj\Debug\UF_Healthemia.csprojAssemblyReference.cache
+C:\Users\VLADYSLA.SHEMET.HR\Source\Repos\flash1o\Healthemia\UF_Healthemia\obj\Debug\UF_Healthemia.csproj.CoreCompileInputs.cache

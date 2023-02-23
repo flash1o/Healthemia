@@ -13,14 +13,14 @@ namespace UF_Healthemia.Services
 {
     internal class HealthemiaPlayerHealthService : MonoBehaviour
     {
-        public HealthemiaPlayerHealthHelper HealthHelper { get; private set; }
+        public HealthemiaDamageCalculator Calculator { get; private set; }
         public HealthemiaPlayerModifierTool ModifierTool { get; private set; }
         public HealthemiaHealthUIRepresenter UIRepresenter { get; private set; }
         public HealthemiaPlayerEventHandler EventHandler { get; private set; }
         private void Awake()
         {
             UnturnedEvents.OnPlayerDamaged += OnPlayerDamaged;
-            HealthHelper = new HealthemiaPlayerHealthHelper();
+            Calculator = new HealthemiaDamageCalculator();
             ModifierTool = new HealthemiaPlayerModifierTool();
             UIRepresenter = new HealthemiaHealthUIRepresenter();
             EventHandler = new HealthemiaPlayerEventHandler();
@@ -28,8 +28,10 @@ namespace UF_Healthemia.Services
 
         private void OnPlayerDamaged(UnturnedPlayer player, ref EDeathCause cause, ref ELimb limb, ref UnturnedPlayer killer, ref Vector3 direction, ref float damage, ref float times, ref bool candamage)
         {
-            if (cause is EDeathCause.SUICIDE or EDeathCause.KILL)
+            if (cause is EDeathCause.SUICIDE || cause is EDeathCause.KILL)
                 return;
+
+            
 
             candamage = false;
             player.Player.GetComponent<HealthemiaPlayerComponent>().CauseDamage((byte)Math.Ceiling(damage), cause, limb);

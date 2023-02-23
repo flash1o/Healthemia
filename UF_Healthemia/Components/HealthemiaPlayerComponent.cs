@@ -20,27 +20,50 @@ namespace UF_Healthemia.Components
         public bool IsInDraggingAction;
 
         private Player _player;
-        private HealthemiaPlayerHealth _playerHealth;
+        private HealthemiaHealthModel _playerHealth;
         private HealthemiaPlayerEventHandler _eventHandler => Healthemia.Instance.PlayerHealthService.EventHandler;
 
         private void Start()
         {
             _player = GetComponentInParent<Player>();
-            _playerHealth = new HealthemiaPlayerHealth(_player);
+            _playerHealth = new HealthemiaHealthModel(_player);
             _player.stance.onStanceUpdated += () => _eventHandler.HandleUpdatedStance(_player, _playerHealth);
             _player.equipment.onEquipRequested += (PlayerEquipment equipment, ItemJar jar, ItemAsset asset, ref bool allow) => _eventHandler.HandleEquipRequested(_playerHealth, equipment, jar, asset, ref allow);
-        }
         
+        }
+
+        internal void TryStartBleedingCoroutine()
+        {
+            _playerHealth.TryStartBleedingCoroutine(this);
+        }
+
+        internal bool HasDiseaseOfSameType(HealthemiaDisease disease)
+        {
+            return _playerHealth.HasDiseaseOfSameType(disease);
+        }
 
         public void CauseDamage(byte damage, EDeathCause cause, ELimb limb)
         {
             _playerHealth.SendDamage(limb, cause, damage);
         }
 
-        public void CauseHeal(ItemConsumeableAsset asset, ELimb limb)
+
+        public void CauseHeal(HealthemiaDisease disease)
         {
-            _playerHealth.SendHeal(asset, limb);
+            _playerHealth.SendHeal(disease);
         }
+
+        public void CauseHeal(HealthemiaHealContext healContext)
+        {
+            _playerHealth.SendHeal(healContext);
+        }
+
+
+        public void CauseHealState()
+        {
+            _playerHealth.SendHealState();
+        }
+        
 
         internal HealthemiaUIContext GetLimbsUIContext()
         {
